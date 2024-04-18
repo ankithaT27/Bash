@@ -1,0 +1,24 @@
+flags:
+set -x   -->debug mode
+set -e   ->exit of error
+set -o pipefail  -->exit of error in a pipe command
+
+search logs
+cat lofile.txt | grep "ERROR"
+grep "Error" logfile.txt
+grep -i "word" filename.txt (ignore case)
+grep -v "word" filename.txt
+grep -c "word" filename.txt (count of words)
+grep -o 'word' filename | wc -l
+grep "word" file1 file2 file3
+grep "^word" file1.txt (lines starting with word)
+grep "word$" file1.txt (ends with that word)
+
+
+awk '{print $1}' logfile.txt
+awk '{print $1,$2} lofile.txt
+awk '{print $1,$2} lofile.txt>output.txt
+awk '/WARNING/ {print $1,$2,$3}' logfile.txt-->prints coln 1,2,3 that has warning prseent in them
+
+
+curl logfilelocation | grep "ERROR" 
