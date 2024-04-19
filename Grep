@@ -14,10 +14,11 @@ grep "word" file1 file2 file3
 grep "^word" file1.txt (lines starting with word)
 grep "word$" file1.txt (ends with that word)
 
-
+awk -F, '{print $4} logfile.txt
 awk '{print $1}' logfile.txt
 awk '{print $1,$2} lofile.txt
 awk '{print $1,$2} lofile.txt>output.txt
+awk '{print $NF}' logfile.txt
 awk '/WARNING/ {print $1,$2,$3}' logfile.txt-->prints coln 1,2,3 that has warning prseent in them
 
 
